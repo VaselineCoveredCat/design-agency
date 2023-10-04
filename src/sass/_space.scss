@@ -1,0 +1,53 @@
+$gap-3xs: clamp(0.25rem, 0.2375rem + 0.0625vw, 0.3125rem);
+$gap-2xs: clamp(0.5rem, 0.475rem + 0.125vw, 0.625rem);
+$gap-xs: clamp(0.75rem, 0.7125rem + 0.1875vw, 0.9375rem);
+$gap-s: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+$gap-m: clamp(1.5rem, 1.425rem + 0.375vw, 1.875rem);
+$gap-l: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
+$gap-xl: clamp(3rem, 2.85rem + 0.75vw, 3.75rem);
+$gap-2xl: clamp(4rem, 3.8rem + 1vw, 5rem);
+$gap-3xl: clamp(6rem, 5.7rem + 1.5vw, 7.5rem);
+
+$gap-3xs-2xs: clamp(0.25rem, 0.175rem + 0.375vw, 0.625rem);
+$gap-2xs-xs: clamp(0.5rem, 0.4125rem + 0.4375vw, 0.9375rem);
+$gap-xs-s: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+$gap-s-m: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+$gap-m-l: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+$gap-l-xl: clamp(2rem, 1.65rem + 1.75vw, 3.75rem);
+$gap-xl-2xl: clamp(3rem, 2.6rem + 2vw, 5rem);
+$gap-2xl-3xl: clamp(4rem, 3.3rem + 3.5vw, 7.5rem);
+
+$gap-3xs-xs: clamp(0.25rem, 0.1125rem + 0.6875vw, 0.9375rem);
+$gap-2xs-s: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+$gap-xs-m: clamp(0.75rem, 0.525rem + 1.125vw, 1.875rem);
+$gap-s-l: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+$gap-m-xl: clamp(1.5rem, 1.05rem + 2.25vw, 3.75rem);
+$gap-l-2xl: clamp(2rem, 1.4rem + 3vw, 5rem);
+$gap-xl-3xl: clamp(3rem, 2.1rem + 4.5vw, 7.5rem);
+
+$gap-3xs-s: clamp(0.25rem, 0.05rem + 1vw, 1.25rem);
+$gap-2xs-m: clamp(0.5rem, 0.225rem + 1.375vw, 1.875rem);
+$gap-xs-l: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem);
+$gap-s-xl: clamp(1rem, 0.45rem + 2.75vw, 3.75rem);
+$gap-m-2xl: clamp(1.5rem, 0.8rem + 3.5vw, 5rem);
+$gap-l-3xl: clamp(2rem, 0.9rem + 5.5vw, 7.5rem);
+
+$gap-3xs-m: clamp(0.25rem, -0.075rem + 1.625vw, 1.875rem);
+$gap-2xs-l: clamp(0.5rem, 0.1rem + 2vw, 2.5rem);
+$gap-xs-xl: clamp(0.75rem, 0.15rem + 3vw, 3.75rem);
+$gap-s-2xl: clamp(1rem, 0.2rem + 4vw, 5rem);
+$gap-m-3xl: clamp(1.5rem, 0.3rem + 6vw, 7.5rem);
+
+$gap-3xs-l: clamp(0.25rem, -0.2rem + 2.25vw, 2.5rem);
+$gap-2xs-xl: clamp(0.5rem, -0.15rem + 3.25vw, 3.75rem);
+$gap-xs-2xl: clamp(0.75rem, -0.1rem + 4.25vw, 5rem);
+$gap-s-3xl: clamp(1rem, -0.3rem + 6.5vw, 7.5rem);
+
+$gap-3xs-xl: clamp(0.25rem, -0.45rem + 3.5vw, 3.75rem);
+$gap-2xs-2xl: clamp(0.5rem, -0.4rem + 4.5vw, 5rem);
+$gap-xs-3xl: clamp(0.75rem, -0.6rem + 6.75vw, 7.5rem);
+
+$gap-3xs-2xl: clamp(0.25rem, -0.7rem + 4.75vw, 5rem);
+$gap-2xs-3xl: clamp(0.5rem, -0.9rem + 7vw, 7.5rem);
+
+$gap-3xs-3xl: clamp(0.25rem, -1.2rem + 7.25vw, 7.5rem);

@@ -1,0 +1,319 @@
+@use "color" as *;
+@use "font" as *;
+@use "space" as *;
+
+$head: "Catamaran", "Catamaran Fallback", sans-serif;
+$body: "Merriweather Sans", "Merriweather Sans Fallback", sans-serif;
+$shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+  0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+
+@font-face {
+  font-family: "Catamaran";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Catamaran"), url("../src/fonts/catamaran-v17-latin-600.woff2") format("woff2"),
+    url("../src/fonts/catamaran-v17-latin-600.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Merriweather Sans"), url("../src/fonts/merriweather-sans-v22-latin-300.woff2") format("woff2"),
+    url("../src/fonts/merriweather-sans-v22-latin-300.woff2") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Catamaran Fallback";
+  src: local("Arial");
+  size-adjust: 92.69%;
+  ascent-override: 160%;
+}
+
+@font-face {
+  font-family: "Merriweather Sans Fallback";
+  src: local("Arial");
+  size-adjust: 106.31%;
+  ascent-override: 90%;
+}
+
+::selection {
+  color: $neutral98;
+  background-color: $primary40;
+}
+
+:focus-visible {
+  outline: $primary40 solid 0.125em;
+}
+
+html {
+  background-color: $neutral10;
+}
+
+body {
+  box-shadow: $shadow;
+  font-family: $body;
+  font-size: $size-0;
+  font-weight: 300;
+  color: $neutral10;
+  background-color: $neutral98;
+}
+
+h1,
+h2,
+.site-logo,
+.article-3 dt,
+.article-5-list > p {
+  font-family: $head;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $size-5;
+}
+
+h2 {
+  font-size: $size-4;
+}
+
+.site-container,
+:is(.article-2, .article-4, .article-5, .footer-nav) > ul,
+.about-article-2 > div,
+.article-3 > dl,
+.article-5-list,
+.article-6 form,
+.footer-nav {
+  display: grid;
+}
+
+.site-container {
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+}
+
+.header,
+.site-nav > ul {
+  display: flex;
+  gap: $gap-xs-xl;
+  align-items: center;
+}
+
+.header,
+.main,
+.footer {
+  padding-inline: $gap-s-2xl;
+}
+
+.header,
+.footer-nav {
+  justify-content: space-between;
+}
+
+.header {
+  padding-block: $gap-xs;
+}
+
+.site-logo,
+.article-3 dt,
+.article-5-list > p {
+  font-size: $size-1;
+}
+
+.site-logo {
+  text-transform: uppercase;
+}
+
+.site-nav {
+  position: relative;
+}
+
+.site-nav > ul {
+  position: fixed;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  font-size: $size-4;
+  color: $neutral10;
+  visibility: visible;
+  background-color: $neutral98;
+  box-shadow: $shadow;
+  transform: translateX(0);
+  transition: all 250ms cubic-bezier(0.25, 0, 0.4, 1);
+}
+
+.menu,
+.article-6 button {
+  width: fit-content;
+  color: $neutral98;
+  background-color: $neutral10;
+  border-radius: 2.5em;
+}
+
+.menu[aria-expanded="false"] + ul {
+  visibility: hidden;
+  transform: translateX(200%);
+}
+
+.main {
+  place-self: center;
+}
+
+.article-1,
+.about-article-1,
+.article-2,
+.article-3,
+.article-4,
+.article-5,
+.article-6,
+.footer {
+  padding-block: $gap-s-2xl;
+}
+
+.article-1,
+.about-article-1,
+.article-2,
+.article-3,
+.article-4,
+.article-5,
+.article-6 {
+  margin-block-end: $gap-s-2xl;
+}
+
+:is(.article-1, .about-article-1) > h1,
+:is(.article-2, .about-article-2, .article-3, .article-4, .article-5, .article-6) > h2 {
+  margin-block-end: $gap-s-l;
+}
+
+:is(.article-1, .about-article-1) > p,
+.article-6 form {
+  max-width: 60ch;
+}
+
+:is(.article-2, .article-5) > ul,
+.about-article-2 p,
+.article-3 > dl,
+.article-6 > div,
+.footer-nav {
+  padding-block-start: $gap-s;
+  border-top: 1px solid currentColor;
+}
+
+:is(.article-2, .article-5, .footer-nav) > ul,
+.about-article-2 > div,
+.article-3 > dl,
+.article-6 form,
+.footer-nav {
+  grid-template-columns: 1fr;
+}
+
+:is(.article-2, .article-4, .article-5) > ul {
+  gap: $gap-s;
+}
+
+.article-2 img {
+  aspect-ratio: 2 / 3;
+}
+
+.about-article-2 > div,
+.article-3 > dl,
+.article-6 form,
+.footer-nav,
+.footer-nav > ul {
+  gap: $gap-s-l $gap-s;
+}
+
+.article-3 dt {
+  margin-block-end: $gap-s;
+}
+
+.article-4 > ul,
+.article-5-list {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.article-4 img {
+  border: 1px solid currentColor;
+}
+
+.article-5-list img {
+  display: inline-block;
+  width: min(16px, $size-0);
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.article-6 :is(input, textarea) {
+  width: 100%;
+  border-bottom: 1px solid $neutral10;
+  background-color: $neutral-variant95;
+  caret-color: $primary40;
+}
+
+.footer-nav {
+  text-align: center;
+}
+
+@media (min-width: 37em) {
+  .site-nav,
+  .site-nav > ul {
+    position: static;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu[aria-expanded="false"] + ul,
+  .menu[aria-expanded="true"] + ul {
+    flex-direction: initial;
+    align-items: initial;
+    justify-content: initial;
+    width: initial;
+    min-height: initial;
+    font-size: initial;
+    color: initial;
+    visibility: visible;
+    background-color: initial;
+    box-shadow: initial;
+    transform: initial;
+  }
+
+  .article-2 > ul,
+  .article-3 > dl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .article-6 form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-6 div:last-of-type {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+
+  .footer-nav > ul {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media (min-width: 50em) {
+  .about-article-2 > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-4 > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 63em) {
+  .footer-nav {
+    grid-template-columns: repeat(2, auto);
+    text-align: initial;
+  }
+}
